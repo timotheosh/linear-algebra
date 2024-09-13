@@ -3,3 +3,13 @@
 * Linear Algebra
 
 Some exercises I have worked through in learning linear algebra using Emacs and Jupyter notebooks
+** Setup
+Using [[https://github.com/pyenv/pyenv][pyenv]] install an anaconda environment.
+#+begin_src shell
+pyenv install anaconda3-2024.02-1
+#+end_src
+You can get a list of availlable anaconda installations by running ~pyenv install -l~
+
+In the root of your project you can enable your anaconda environment with ~pyenv local anaconda3-2024.02-1~ or which ever anaconda installation you go with ~pyenv local <some_anaconda_version>~. Be sure to adjust the paths in ~.dir-locals.el~ to point to your anaconda installation.
+** License
+It's all maths I copied from an instructional video. So I claim no copyright, and it is unlicensed to the extent I am legally allowed to.
