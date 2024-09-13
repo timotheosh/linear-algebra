@@ -1,0 +1,40 @@
+#+title: Notebook 01
+
+* Notebook 01
+** Arithmatic with vectors
+Import numpy
+#+begin_src jupyter-python :session vectors :results none
+import numpy as np
+import sys
+import traceback
+#sys.stderr = sys.stdout
+
+def format_value(arg):
+    try:
+        print(arg.tolist())
+    except:
+        print(traceback.format_exc())
+        sys.stdout.flush()
+#+end_src
+
+Now some vectors
+#+begin_src jupyter-python :session vectors :results none
+a = np.array([20,40,60])
+b = np.array([10,20,30])
+c = np.array([5,10,15,20])
+#+end_src
+
+Adding vectors of similar dimensions.
+#+begin_src python :session vectors :results output
+format_value(a + b)
+#+end_src
+
+#+RESULTS:
+: [30, 60, 90]
+
+Adding vectors of disimilar vectors will throw exceptions.
+#+begin_src python :session vectors :results output
+format_value(a + c)
+#+end_src
+
+#+RESULTS:

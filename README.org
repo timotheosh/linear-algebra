@@ -1,0 +1,5 @@
+#+title: Linear Algebra
+
+* Linear Algebra
+
+Some exercises I have worked through in learning linear algebra using Emacs and Jupyter notebooks
