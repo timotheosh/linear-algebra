@@ -7,14 +7,6 @@ Import numpy
 import numpy as np
 import sys
 import traceback
-#sys.stderr = sys.stdout
-
-def format_value(arg):
-    try:
-        print(arg.tolist())
-    except:
-        print(traceback.format_exc())
-        sys.stdout.flush()
 #+end_src
 
 Now some vectors
@@ -25,16 +17,25 @@ c = np.array([5,10,15,20])
 #+end_src
 
 Adding vectors of similar dimensions.
-#+begin_src python :session vectors :results output
-format_value(a + b)
+#+begin_src jupyter-python :session vectors :results value
+a + b
 #+end_src
 
 #+RESULTS:
-: [30, 60, 90]
+: array([30, 60, 90])
 
 Adding vectors of disimilar vectors will throw exceptions.
-#+begin_src python :session vectors :results output
-format_value(a + c)
+#+begin_src jupyter-python :session vectors :results value
+a + c
 #+end_src
 
 #+RESULTS:
+:RESULTS:
+# [goto error]
+: [0;31m---------------------------------------------------------------------------[0m
+: [0;31mValueError[0m                                Traceback (most recent call last)
+: Cell [0;32mIn[10], line 1[0m
+: [0;32m----> 1[0m a [38;5;241m+[39m c
+:
+: [0;31mValueError[0m: operands could not be broadcast together with shapes (3,) (4,)
+:END:
